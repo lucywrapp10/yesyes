@@ -3,13 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>yesyes</title>
+  <title>yesyes — a fresh start</title>
+  <meta name="description" content="yesyes is a lightweight, customizable starter site for anything you want to build." />
+  <meta property="og:title" content="yesyes" />
+  <meta property="og:description" content="A lightweight, customizable starter site." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232563eb'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='system-ui' font-weight='700' font-size='18' fill='white'%3Ey%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <nav class="nav">
       <a href="#" class="logo">yesyes</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#features">Features</a></li>
@@ -21,27 +29,47 @@
   <main>
     <section class="hero">
       <h1>Welcome to yesyes</h1>
-      <p>A fresh start. Build something great.</p>
+      <p class="tagline">A fresh start. Build something great.</p>
+      <p class="hero-sub">A lightweight, customizable landing page — ready for your story, your product, or your next big idea.</p>
       <a href="#features" class="btn">Get Started</a>
     </section>
 
-    <section id="about" class="section">
+    <section id="about" class="section reveal">
       <h2>About</h2>
-      <p>This is a starter website. Replace this content with your story.</p>
+      <p>yesyes is a minimal static site scaffold designed to get out of your way. No build step, no framework lock-in — just plain HTML, CSS, and a sprinkle of JavaScript.</p>
+      <p>Fork it, rename it, restyle it. Everything is kept small and readable so you can shape it to fit whatever you're building.</p>
     </section>
 
-    <section id="features" class="section alt">
+    <section id="features" class="section alt reveal">
       <h2>Features</h2>
       <div class="grid">
-        <div class="card"><h3>Fast</h3><p>Lightweight static site.</p></div>
-        <div class="card"><h3>Simple</h3><p>Plain HTML, CSS, and JS.</p></div>
-        <div class="card"><h3>Yours</h3><p>Easy to customize.</p></div>
+        <div class="card"><h3>Fast</h3><p>Static files load instantly. No bundler required.</p></div>
+        <div class="card"><h3>Simple</h3><p>Plain HTML, CSS, and JS you can read top-to-bottom.</p></div>
+        <div class="card"><h3>Responsive</h3><p>Works on phones, tablets, and desktops out of the box.</p></div>
+        <div class="card"><h3>Dark mode</h3><p>Respects your OS theme automatically.</p></div>
+        <div class="card"><h3>Accessible</h3><p>Semantic markup and keyboard-friendly navigation.</p></div>
+        <div class="card"><h3>Yours</h3><p>No telemetry, no dependencies — fully editable.</p></div>
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section reveal">
       <h2>Contact</h2>
-      <p>Reach out at <a href="mailto:hello@example.com">hello@example.com</a></p>
+      <p>Have a question or want to say hi? Send a note.</p>
+      <form class="contact-form" action="mailto:hello@example.com" method="post" enctype="text/plain">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="btn">Send</button>
+      </form>
     </section>
   </main>
 
